@@ -26,7 +26,7 @@ if(!isset($error)):
                 <td><?php echo $book->getSummary(); ?></td>
                 <td><?php echo $book->getPublication_date(); ?></td>
                 <td><?php echo $book->getCategory(); ?></td>
-                <td><a href="book.php?id=<?php echo $book->getBook_Id(); ?>" class="btn btn-danger">Delete Book</a></td>
+                <td><a href="deletebook.php?book_id=<?php echo $book->getBook_Id(); ?>" class="btn btn-danger">Delete Book</a></td>
                 
               </tr>
         </tbody>
@@ -37,6 +37,7 @@ if(!isset($error)):
     <p><?php echo $error ?></p>
   </div>
 <?php endif; ?>
+
 <?php
 include "view/template/footer.php";
 ?>

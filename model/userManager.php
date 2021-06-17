@@ -24,11 +24,35 @@ class userManager extends DataBase {
 
 
   // Récupère un utilisateur par son id
-  public function getUserById(){}
-   
+  public function getUserById(int $id):User{
+    $query = $this->db->prepare (
+      "SELECT *
+      FROM User
+      WHERE id = :id"
+    );
+    $query->execute([
+    "id" => $id
+    ]);
+    $data = $query -> fetchAll(PDO::FETCH_ASSOC);
+    $user = new User($data[0]);
+    return $user;
+  }
 
   // Récupère un utilisateur par son code personnel
-  public function getUser() {}
+  public function getUser(int $library_number):User {
+    $query = $this->db->prepare (
+      "SELECT *
+      FROM User
+      WHERE library_number = :library_number"
+    );
+    $query->execute([
+    "library_number" => $library_number
+    ]);
+    $data = $query -> fetchAll(PDO::FETCH_ASSOC);
+    $user = new User($data[0]);
+    return $user;
+  }
+
     
   public function __construct() {
     $this->db = DataBase::getDB();

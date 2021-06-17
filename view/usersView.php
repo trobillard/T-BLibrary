@@ -18,7 +18,6 @@ include "view/template/header.php";
                 <th scope="col">Address</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Email</th>
-                <th scope="col">Book </th>
             </tr>
           </thead>
           <tbody>
@@ -33,6 +32,7 @@ include "view/template/header.php";
                 <td><?php echo $user->getAdress(); ?></td>
                 <td><?php echo $user->getPhone(); ?></td>
                 <td><?php echo $user->getEmail(); ?></td>
+                <td><a href="user.php?library_number=<?php echo $user->getLibrary_Number(); ?>" class="btn btn-primary text-dark px-4">Information</a></td>
               </tr>
             <?php endforeach; ?>
           </tbody>
