@@ -1,6 +1,7 @@
 <?php
 include "view/template/nav.php";
 include "view/template/header.php";
+if(!isset($error)):
 ?>
 <div class="mainpage">
 <h2>Book Information</h2>
@@ -25,11 +26,17 @@ include "view/template/header.php";
                 <td><?php echo $book->getSummary(); ?></td>
                 <td><?php echo $book->getPublication_date(); ?></td>
                 <td><?php echo $book->getCategory(); ?></td>
+                <td><a href="book.php?id=<?php echo $book->getBook_Id(); ?>" class="btn btn-danger">Delete Book</a></td>
+                
               </tr>
         </tbody>
     </table>
 </div>
-
+<?php else: ?>
+  <div class="alert alert-danger">
+    <p><?php echo $error ?></p>
+  </div>
+<?php endif; ?>
 <?php
 include "view/template/footer.php";
 ?>

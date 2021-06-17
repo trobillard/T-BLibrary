@@ -56,6 +56,20 @@ class bookManager extends DataBase{
   public function updateBookStatus() {
 
   }
+  // Supprime un livre
+  public function deleteBook(int $book_id):bool {
+    $query = $this->db->prepare(
+      "DELETE
+      FROM Book
+      WHERE book_id = :book_id"
+  
+    );
+    $result = $query->execute([
+      "book_id" => $book_id
+    ]);
+    return $result;
+  }
+
 
   public function __construct() {
     $this->db = DataBase::getDB();
