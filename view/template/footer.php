@@ -1,11 +1,32 @@
 </main>
 <footer>
-    <section class="bg-white text-dark my-0 py-2 text-center">
-        <p>A journey of a thousand miles begin by a single step</p>
+    <section class=" text-white my-0 py-2" id="footer">
+        <div class="container p-4 foo">
+      <!--Grid row-->
+            <div class="row fou">
+        <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <a href="books.php" class="text-white" style="text-decoration: none;">BOOKS</a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <a href="users.php" class="text-white" style="text-decoration: none;">USERS</a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <a href="https://github.com/trobillard" class="text-white" style="text-decoration: none;" target="_blank">IT SERVICE</a>
+                </div>
+            </div>
+        </div>
+  <!-- Copyright -->
+        <div id="textfooter">
+            <p>T^^B Library </br> 50 Yonsei-ro Seodaemun-gu, Seoul, 03722, Republic of Korea</br></br>
+            © 2021 T^^B LIBRARY. ALL RIGHTS RESERVED.</p>
+            <img src="../../assets/img/logo-2.png" id="logo">
+        </div>
     </section>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-
+<script src="../../assets/js/contact.js">></script>
+<script src="../../assets/js/vdo.js">></script>
 </body>
 </html>

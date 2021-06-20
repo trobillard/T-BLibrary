@@ -101,33 +101,103 @@ textarea {
 /* ##################################################################### */
 /* Extra small devices (phones, less than 768px) */
 *{
-    background: white;
     margin: 0;
     padding: 0;
 }
 
-/* ##########################   NAVBAR   ########################### */
-#nav{
-    background-image: url(../img/yonsei.jpg) ; 
-}
-
-.navbar{
-    background-image: url(../img/yonsei.jpg) ;
-}
-
 #main{
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .mainpage{
     margin-top: 10%;
 }
+
+.mainpage h2{
+    margin-bottom: 2em;
+}
+
+/* ##########################   NAVBAR   ########################### */
+
+/* ##########################   HEADER   ########################### */
+
+/* ##########################   FOOTER  ########################### */
+#footer{
+    background-color: rgb(3, 30, 64);
+  
+}
+#footer p, #footer a {
+    background-color: rgb(3, 30, 64);
+    color: rgb(187, 186, 184);
+}
+
+#footer a:hover{
+    color: rgb(187, 186, 184) !important;
+}
+
+#textfooter{
+    background-color: rgb(3, 30, 64);
+    display: flex;
+    align-items: flex-start;
+    padding-left: 5em;
+    margin-left: 5em;
+    padding-right: 10em;
+    justify-content: space-between;
+}
+ .textfooter{
+    color: rgb(187, 186, 184);
+ }
+
+ .fou{
+    margin-left: 3em !important;
+ }
+
+ .foo{
+     width: 50%;
+     margin-left: 5em !important;
+     margin-right: auto !important;
+ }
+
+ /* ##########################  BTN   ########################### */
+.btn1{
+    background-color: rgb(3, 30, 64);
+    color: rgb(187, 186, 184) !important; 
+}
+/* ##########################  INDEX   ########################### */
+#myVideo {
+    display: none;
+  }
+#bg1{
+    background: url('../img/bg.jpg');
+    background-size: cover;
+}
+  .content {
+    position: fixed;
+    color: rgb(187, 186, 184);
+    top:50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+  }
+
+
 /* ##################################################################### */
 /* ############################   TABLETS   ############################ */
 /* ##################################################################### */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+  video#bgvid {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: -100;
+        min-width:100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;     
+        height: auto;
+        background: url(/assets/img/bg.jpg) no-repeat;
+        background-size: cover;
+      }
 }
 
 /* ##################################################################### */
@@ -135,7 +205,11 @@ textarea {
 /* ##################################################################### */
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
+/* ##########################   NAVBAR   ########################### */
+#navbarNavDropdown{
+    margin-left: 60% !important;
+    padding-right: 1em !important;
+}
 }
 
 /* ##################################################################### */
@@ -143,11 +217,21 @@ textarea {
 /* ##################################################################### */
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+/* ##########################   NAVBAR   ########################### */
+#navbarNavDropdown{
+    margin-left: 72% !important;
+    padding-right: 1em !important;
+}
 }
 
 
-
+@media (min-width: 1780px) {
+/* ##########################   NAVBAR   ########################### */
+#navbarNavDropdown{
+    margin-left: 80% !important;
+    padding-right: 1em !important;
+}
+}
 
 
 

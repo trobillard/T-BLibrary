@@ -9,7 +9,7 @@ abstract class DataBase
         $db = new PDO('mysql:host=localhost:8889;dbname=library_php', "root", "root");
         return $db;
       }catch (Exception $e) {
-        echo "Erreur lors de la connexion à la base de donée: " . $e->getMessage() . "<br/>";
+        echo "Error while connecting to the database: " . $e->getMessage() . "<br/>";
         exit($e->getMessage());
 
         }

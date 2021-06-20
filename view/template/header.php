@@ -19,9 +19,8 @@
   </head>
   <body>
     <header class="maincolor text-dark">
-    <section class="container text-center ">
-      <h1>TㅆB Library</h1>
-      <p>천 마일의 여행은 단일 단계로 시작합니다</p>
+    <section id="test">
+      
 </section>
     </header>
     <main class="container my-4" id="main">

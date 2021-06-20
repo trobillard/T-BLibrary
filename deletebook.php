@@ -7,9 +7,11 @@ require "model/entity/book.php";
 if (isset($_GET["book_id"]) && !empty($_GET["book_id"])) {
     $bookDelete = new BookManager();
     $result = $bookDelete->deleteBook($_GET["book_id"]);
-}
 
-if(!$result) {
-    $error ="The book is no longer exist";
-  }
+// redirection sur une autre page
+if($result) {
+  header("Location: books.php");
+  exit();
+}
+}
 include "view/bookView.php";

@@ -67,6 +67,7 @@ class bookManager extends DataBase{
     $result = $query->execute([
       "book_id" => $book_id
     ]);
+   
     return $result;
   }
 

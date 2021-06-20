@@ -10,19 +10,20 @@ CREATE TABLE User(
     city_code CHAR(5) NOT NULL,
     city VARCHAR(50) NOT NULL,
     adress VARCHAR(100) NOT NULL,
-    phone FLOAT(12) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
     email VARCHAR(50) NOT NULL,
     library_number INT(5) NOT NULL,
     PRIMARY KEY (id)
 )
 ENGINE=InnoDB;
 
+ALTER TABLE `User` ADD UNIQUE( `phone`, `email`, `library_number`); 
 INSERT INTO User(lastname, firstname, birth_date, city_code, city, adress, phone, email, library_number)
 VALUES
-("장", "다은", "1993-03-09", "1218", "서울", "송파구 양재대로 ", "01023345667", "jj@gmail.com", 99999),
-("김", "태희", "1978-06-23", "1315", "서울", "마포구 홍대", "01089980990", "bb@gmail.com", 99996),
-("박", "다솜", "1991-10-02", "1200", "서울", "마포구 신촌동", "01041145445", "jjj@gmail.com", 99997),
-("호", "티보", "1989-02-10", "1210", "서울", "강남구 역삼동", "01049915289", "tt@gmail.com", 99998);
+("장", "다은", "1993-03-09", "1218", "서울", "송파구 양재대로 ", "+821023345667", "jj@gmail.com", 99999),
+("김", "태희", "1978-06-23", "1315", "서울", "마포구 홍대", "+821089980990", "bb@gmail.com", 99996),
+("박", "다솜", "1991-10-02", "1200", "서울", "마포구 신촌동", "+821041145445", "jjj@gmail.com", 99997),
+("호", "티보", "1989-02-10", "1210", "서울", "강남구 역삼동", "+821049915289", "tt@gmail.com", 99998);
 
 CREATE TABLE Book(
     book_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
