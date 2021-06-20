@@ -2,11 +2,11 @@
 include "view/template/header.php";
 ?>
 
-<div class="mainpage" id="bg1">
-<div class="content">
+<div class="mainpage" >
+<div class="content text-white">
 <h1>TㅆB Library</h1>
 <p>천 마일의 여행은 단일 단계로 시작합니다</p>
-<a class="btn btn1" aria-current="page" href="books.php">Home</a>
+<a class="btn btn1" aria-current="page" href="books.php">Enter</a>
 </div>
 
 <div>

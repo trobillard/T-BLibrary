@@ -158,19 +158,14 @@ textarea {
      margin-right: auto !important;
  }
 
+
  /* ##########################  BTN   ########################### */
 .btn1{
     background-color: rgb(3, 30, 64);
     color: rgb(187, 186, 184) !important; 
 }
 /* ##########################  INDEX   ########################### */
-#myVideo {
-    display: none;
-  }
-#bg1{
-    background: url('../img/bg.jpg');
-    background-size: cover;
-}
+
   .content {
     position: fixed;
     color: rgb(187, 186, 184);
