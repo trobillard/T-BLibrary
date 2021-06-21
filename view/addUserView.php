@@ -8,11 +8,11 @@ include "view/template/header.php";
     <div class="form-row">
         <div class="form-group col-md-5 my-3">
             <label for="lastname">Lastname :</label>
-            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="책 제목" required>
+            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="성 " required>
         </div>
         <div class="form-group col-md-5 my-3">
             <label for="firstname">Firstname :</label>
-            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="저자" required>
+            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="이름" required>
         </div>
         <div class="form-group col-md-5 my-3">
             <label for="birth_date">Birthdate :</label>
@@ -20,27 +20,27 @@ include "view/template/header.php";
         </div>
         <div class="form-group col-md-5 my-3">
             <label for="adress">Address :</label>
-            <input type="text" class="form-control" name="adress" id="adress" placeholder="범주" required>
+            <input type="text" class="form-control" name="adress" id="adress" placeholder="주소" required>
         </div>
         <div class="form-group col-md-5 my-3">
             <label for="city">City :</label>
-            <input type="text" class="form-control" name="city" id="city" placeholder="범주" required>
+            <input type="text" class="form-control" name="city" id="city" placeholder="시티" required>
         </div>
         <div class="form-group col-md-5 my-3">
             <label for="city_code">Zip Code :</label>
-            <input type="text" class="form-control" name="city_code" id="city_code" placeholder="범주" required>
+            <input type="text" class="form-control" name="city_code" id="city_code" placeholder="우편 번호 (10100)" pattern="[0-9]{5}" required>
         </div>
         <div class="form-group col-md-5 my-3">
             <label for="phone">Phone :</label>
-            <input type="text" class="form-control" name="phone" id="phone" placeholder="범주" required>
+            <input type="text" class="form-control" name="phone" id="phone" placeholder="821012341234" pattern="[2-8]{2}[0-1]{2}[0-9]{4}[0-9]{4}" required>
         </div>
         <div class="form-group col-md-5 my-3">
             <label for="email">Email :</label>
-            <input type="text" class="form-control" name="email" id="email" placeholder="범주" required>
+            <input type="email" class="form-control" name="email" id="email" size="30" placeholder="name@example.com" required>
         </div>
         <div class="form-group col-md-5 my-3">
             <label for="library_number">Library Number :</label>
-            <input type="text" class="form-control" name="library_number" id="library_number" placeholder="범주" required>
+            <input type="text" class="form-control" name="library_number" id="library_number" placeholder="도서관 번호 (99999)" pattern="[0-9]{5}"required>
         </div>
     </div>
     <button type="submit" class="form-group col-5 my-3 btn btn1" >Add</button>

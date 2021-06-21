@@ -69,6 +69,7 @@ class Book {
         return $this->category;
     }
 
+
     public function setUser_Id(?int $user_id) {
         $this->user_id = $user_id;
     }
@@ -76,4 +77,5 @@ class Book {
     public function getUser_Id(){
         return $this->user_id;
     }
+    
 }

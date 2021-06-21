@@ -72,6 +72,22 @@ class userManager extends DataBase {
     ]);
     return $result;
   }
+
+// Supprime un utilisateur
+public function deleteUser(int $id):bool {
+  $query = $this->db->prepare(
+    "DELETE
+    FROM User
+    WHERE id = :id"
+
+  );
+  $result = $query->execute([
+    "id" => $id
+  ]);
+ 
+  return $result;
+}
+
   public function __construct() {
     $this->db = DataBase::getDB();
 }

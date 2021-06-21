@@ -10,7 +10,8 @@ include "view/template/header.php";
         <article class="card">
           <div class="card-header">
             <h5 class="card-title"><?php echo $user->getLastName(). " " . $user->getFirstName(). " <br>(" .$user->getBirth_Date(). ")"; ?></h5>
-            <h6 class="card-subtitle mb-2 text-muted">Registraion number : <?php echo $user->getLibrary_Number(); ?></h6>
+            <h6 class="card-subtitle mb-2 text-muted">Registration number : <?php echo $user->getLibrary_Number(); ?></h6>
+            <h6 class="card-subtitle mb-2 text-muted">Member since : <?php echo $user->getRegistration(); ?></h6>
           </div>
           <div class="card-body">
             <ul class="list-group list-group-flush border-bottom mb-2">
@@ -18,6 +19,7 @@ include "view/template/header.php";
               <li class="list-group-item">Phone number : <?php echo $user->getPhone(); ?></li>
               <li class="list-group-item">Email : <?php echo $user->getEmail(); ?></li>
             </ul>
+            <a href="deleteuser.php?id=<?php echo $user->getId(); ?>" class="btn btn-danger">Delete</a>
         </article>
       </div>
 </div>

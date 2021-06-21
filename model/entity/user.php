@@ -11,6 +11,7 @@ class User {
     protected string $adress;
     protected int $phone;
     protected string $email;
+    protected string $registration;
     protected int $library_number;
     
     public function __construct(?array $data=null) {
@@ -85,6 +86,13 @@ class User {
     }
     public function getEmail(){
         return $this->email;
+    }
+
+    public function setRegistration(string $registration){
+        $this->registration =$registration;
+    }
+    public function getRegistration(){
+        return $this->registration;
     }
 
     public function setLibrary_Number(int $library_number){

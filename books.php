@@ -6,7 +6,9 @@ require "model/entity/book.php";
 
 $allBooks = new BookManager();
 $books = $allBooks->getBooks();
-
+// echo "<pre>";
+// var_dump($books);
+// echo "</pre>";
 require "view/booksView.php";
 
 ?>

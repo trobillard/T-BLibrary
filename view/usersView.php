@@ -18,6 +18,7 @@ include "view/template/header.php";
                 <th scope="col">Address</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Email</th>
+                <th scope="col">Information</th>
             </tr>
           </thead>
           <tbody>

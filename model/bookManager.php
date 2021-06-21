@@ -8,19 +8,20 @@ class bookManager extends DataBase{
   // Récupère tous les livres
   public function getBooks(){
     $query = $this->db->prepare (
-      "SELECT *
-      FROM book"
+      "SELECT book.*,
+      concat(user.lastname,' ',user.firstname) AS fullname 
+      FROM Book 
+      LEFT JOIN User 
+      ON Book.user_id = User.id "
     );
-    $query->execute();
+    $query->execute([]);
     $books = $query -> fetchAll(PDO::FETCH_ASSOC);
     foreach ($books as $key => $book) {
       $books[$key] = new Book($book);
     }
     return $books;
   }
-
   
-
   // Récupère un livre
   public function getBook(int $book_id):Book {
     $query = $this->db->prepare (
@@ -53,8 +54,17 @@ class bookManager extends DataBase{
   }
 
   // Met à jour le statut d'un livre emprunté
-  public function updateBookStatus() {
-
+  public function updateBookStatus(Book $book) {
+    $query = $this->db->prepare(
+      "UPDATE book
+      SET user_id = :user_id
+      WHERE book_id = :book_id"
+    );
+    $result = $query->execute([
+      "user_id" => $book->getUser_Id(),
+      "book_id" => $book->getBook_Id()
+    ]);
+    return $result;
   }
   // Supprime un livre
   public function deleteBook(int $book_id):bool {

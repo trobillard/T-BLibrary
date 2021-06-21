@@ -164,6 +164,30 @@ textarea {
     background-color: rgb(3, 30, 64);
     color: rgb(187, 186, 184) !important; 
 }
+
+#monBoutton {
+    color: rgb(187, 186, 184) !important; 
+    
+}
+
+#chevron ion-icon{
+    width: 5%;
+    height: 5%;
+    margin-left: 2em;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    animation-name: arrow;
+    animation-timing-function: linear;
+
+}
+
+  @keyframes arrow {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
 /* ##########################  INDEX   ########################### */
 
   .content {
@@ -173,7 +197,6 @@ textarea {
     left: 50%;
     transform : translate(-50%, -50%);
   }
-
 
 /* ##################################################################### */
 /* ############################   TABLETS   ############################ */

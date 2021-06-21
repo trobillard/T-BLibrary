@@ -8,6 +8,7 @@ require "model/entity/book.php";
 if (!isset($_GET["book_id"]) || empty($_GET["book_id"])) {
     header("Location: index.php");
 }
+
 // If id is in url sanitize it and get the matching account with the operations
 $book_id = filter_var($_GET["book_id"], FILTER_SANITIZE_NUMBER_INT);
 $bookSingle = new BookManager();
