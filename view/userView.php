@@ -9,6 +9,7 @@ include "view/template/header.php";
       <div class="col-12 col-md-6 col-lg-4">
         <article class="card">
           <div class="card-header">
+          <img src="<?php echo $user->getPictuser() ; ?>">
             <h5 class="card-title"><?php echo $user->getLastName(). " " . $user->getFirstName(). " <br>(" .$user->getBirth_Date(). ")"; ?></h5>
             <h6 class="card-subtitle mb-2 text-muted">Registration number : <?php echo $user->getLibrary_Number(); ?></h6>
             <h6 class="card-subtitle mb-2 text-muted">Member since : <?php echo $user->getRegistration(); ?></h6>

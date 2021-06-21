@@ -6,9 +6,10 @@ if(!isset($error)):
 <div class="mainpage">
 <h2>Book Information</h2>
     <div class="row mt-5">
-      <div class="col-12 col-md-12 col-lg-12">
+      <div class="col-12 col-md-6 col-lg-4">
         <article class="card">
           <div class="card-header">
+            <img src="<?php echo $book->getPicture() ; ?>">
             <h5 class="card-title"><?php echo $book->getTitle() ; ?></h5>
             <h5 class="card-title"><?php echo $book->getAuthor(); ?></h5>
             <h6 class="card-subtitle mb-2 text-muted">Published :<?php echo $book->getPublication_date(); ?></h5>

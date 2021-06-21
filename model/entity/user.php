@@ -5,6 +5,7 @@ class User {
     protected int $id;
     protected string $lastname;
     protected string $firstname;
+    protected string $pictuser;
     protected string $birth_date;
     protected int $city_code;
     protected string $city;
@@ -44,6 +45,14 @@ class User {
     }
     public function getFirstName(){
         return $this->firstname;
+    }
+
+    public function setPictuser(string $pictuser) {
+        $this->pictuser = $pictuser;
+    }
+
+    public function getPictuser(){
+        return $this->pictuser;
     }
 
     public function setBirth_Date(string $birth_date){

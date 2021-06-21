@@ -7,6 +7,7 @@ class Book {
     protected string $summary;
     protected string $publication_date;
     protected string $category;
+    protected string $picture;
     protected ?int $user_id;
     
     
@@ -69,6 +70,13 @@ class Book {
         return $this->category;
     }
 
+    public function setPicture(string $picture) {
+        $this->picture = $picture;
+    }
+
+    public function getPicture(){
+        return $this->picture;
+    }
 
     public function setUser_Id(?int $user_id) {
         $this->user_id = $user_id;

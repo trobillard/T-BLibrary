@@ -48,7 +48,8 @@ class bookManager extends DataBase{
       "author"=>$addbook->getAuthor(),
       "summary"=>$addbook->getSummary(),
       "publication_date"=>$addbook->getPublication_date(),
-      "category"=>$addbook->getCategory()
+      "category"=>$addbook->getCategory(),
+      "picture"=>$picture->getPicture()
     ]);
     return $result;
   }
