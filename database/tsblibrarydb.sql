@@ -6,7 +6,7 @@ CREATE TABLE User(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     lastname VARCHAR(20) NOT NULL,
     firstname VARCHAR(20) NOT NULL,
-    pictuser VARCHAR(100) NOT NULL,
+    pictuser VARCHAR(100) NULL,
     birth_date DATE NOT NULL,
     city_code CHAR(5) NOT NULL,
     city VARCHAR(50) NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE Book(
     summary TEXT(500) NOT NULL,
     publication_date DATE NOT NULL,
     category VARCHAR(20) NOT NULL,
-    picture VARCHAR(100) NOT NULL,
+    picture VARCHAR(100),
     user_id INT UNSIGNED,
     PRIMARY KEY(book_id),
     FOREIGN KEY (user_id) REFERENCES User(id)

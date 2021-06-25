@@ -56,13 +56,12 @@ class userManager extends DataBase {
   // Ajoute un nouveau user
   public function addUser(User $adduser) {
     $query = $this->db->prepare(
-      "INSERT INTO user(lastname, firstname, pictuser, birth_date, city_code, city, adress, phone, email, library_number)
-      VALUES (:lastname, :firstname, :pictuser, :birth_date, :city_code, :city, :adress, :phone, :email, :library_number)"
+      "INSERT INTO user(lastname, firstname, birth_date, city_code, city, adress, phone, email, library_number)
+      VALUES (:lastname, :firstname, :birth_date, :city_code, :city, :adress, :phone, :email, :library_number)"
     );
     $result = $query->execute([
       "lastname"=>$adduser->getLastName(),
       "firstname"=>$adduser->getFirstName(),
-      "pictuser"=>$pictuser->getPictuser(),
       "birth_date"=>$adduser->getBirth_Date(),
       "city_code"=>$adduser->getCity_Code(),
       "city"=>$adduser->getCity(),

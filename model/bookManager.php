@@ -1,7 +1,7 @@
 <?php
 require "dataBase.php";
 
-class bookManager extends DataBase{
+class BookManager extends DataBase{
 
     private PDO $db;
 
@@ -49,7 +49,6 @@ class bookManager extends DataBase{
       "summary"=>$addbook->getSummary(),
       "publication_date"=>$addbook->getPublication_date(),
       "category"=>$addbook->getCategory(),
-      "picture"=>$picture->getPicture()
     ]);
     return $result;
   }
